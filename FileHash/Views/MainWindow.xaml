@@ -1,0 +1,11 @@
+﻿<Window x:Class="FileHash.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        SizeToContent="Height"
+        Title="ハッシュ値生成"
+        Width="600">
+    <Grid>
+        <ContentControl prism:RegionManager.RegionName="MainContent" />
+    </Grid>
+</Window>

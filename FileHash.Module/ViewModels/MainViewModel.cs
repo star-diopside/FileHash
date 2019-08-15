@@ -1,7 +1,7 @@
-﻿using CreateHashData.Model;
+﻿using FileHash.Module.Models;
 using System.Collections.ObjectModel;
 
-namespace CreateHashData.ViewModel
+namespace FileHash.Module.ViewModels
 {
     class MainViewModel
     {
