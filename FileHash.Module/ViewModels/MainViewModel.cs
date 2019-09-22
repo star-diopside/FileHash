@@ -3,6 +3,7 @@ using Microsoft.Win32;
 using Prism.Commands;
 using Reactive.Bindings;
 using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Input;
 
 namespace FileHash.Module.ViewModels
@@ -16,6 +17,7 @@ namespace FileHash.Module.ViewModels
             _model = model;
             SelectFileCommand = new DelegateCommand(SelectFile);
             ComputeFileHashCommand = new DelegateCommand(ComputeFileHash);
+            CompareFileHashCommand = new DelegateCommand(CompareFileHash);
         }
 
         /// <summary>使用可能なハッシュアルゴリズム</summary>
@@ -27,14 +29,20 @@ namespace FileHash.Module.ViewModels
         /// <summary>ファイル名</summary>
         public ReactivePropertySlim<string> FileName => _model.FileName;
 
-        /// <summary>ファイルのハッシュ値</summary>
-        public ReactivePropertySlim<string> FileHashString => _model.FileHashString;
+        /// <summary>算出したファイルハッシュ値</summary>
+        public ReactivePropertySlim<string> ComputedFileHashString => _model.ComputedFileHashString;
+
+        /// <summary>比較するファイルハッシュ値</summary>
+        public ReactivePropertySlim<string> CompareFileHashString => _model.CompareFileHashString;
 
         /// <summary>ファイル選択コマンド</summary>
         public ICommand SelectFileCommand { get; }
 
         /// <summary>ハッシュ値算出コマンド</summary>
         public ICommand ComputeFileHashCommand { get; }
+
+        /// <summary>ハッシュ値比較コマンド</summary>
+        public ICommand CompareFileHashCommand { get; }
 
         public void SelectFile()
         {
@@ -49,6 +57,18 @@ namespace FileHash.Module.ViewModels
         private void ComputeFileHash()
         {
             _model.ComputeFileHash();
+        }
+
+        private void CompareFileHash()
+        {
+            if (_model.CompareFileHash())
+            {
+                MessageBox.Show("ハッシュ値が一致しました。");
+            }
+            else
+            {
+                MessageBox.Show("ハッシュ値が一致しません。");
+            }
         }
     }
 }
