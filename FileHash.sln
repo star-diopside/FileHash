@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileHash", "FileHash\FileHash.csproj", "{08F5FD1A-6060-4CAD-9579-B6A5522B6FBD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileHash.Module", "FileHash.Module\FileHash.Module.csproj", "{7CCB32F3-587C-4347-9106-E1AB5D4FC6B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08F5FD1A-6060-4CAD-9579-B6A5522B6FBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08F5FD1A-6060-4CAD-9579-B6A5522B6FBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08F5FD1A-6060-4CAD-9579-B6A5522B6FBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08F5FD1A-6060-4CAD-9579-B6A5522B6FBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CCB32F3-587C-4347-9106-E1AB5D4FC6B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CCB32F3-587C-4347-9106-E1AB5D4FC6B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CCB32F3-587C-4347-9106-E1AB5D4FC6B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CCB32F3-587C-4347-9106-E1AB5D4FC6B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1728979E-1DA5-491E-94EB-0258C2883571}
+	EndGlobalSection
+EndGlobal

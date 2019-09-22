@@ -1,17 +1,15 @@
-﻿using System.Windows;
-using CreateHashData.ViewModel;
+﻿using System.Windows.Controls;
 
-namespace CreateHashData.View
+namespace FileHash.Module.Views
 {
     /// <summary>
     /// MainView.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainView : Window
+    public partial class MainView : UserControl
     {
         public MainView()
         {
             InitializeComponent();
-            this.DataContext = new MainViewModel();
         }
     }
 }
